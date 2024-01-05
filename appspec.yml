@@ -10,10 +10,10 @@ file_exists_behavior: OVERWRITE
 
 hooks:
   AfterInstall:
-    - location: start.sh
+    - location: scripts/start.sh
       timeout: 10
       runas: root
   ApplicationStop:
-    - location: stop.sh
+    - location: scripts/stop.sh
       timeout: 10
       runas: root
