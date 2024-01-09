@@ -18,6 +18,8 @@ pipeline {
     
         stage('Checkout Github') {
             steps {
+                echo "Checkout Github..."
+            
             
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [],
                 userRemoteConfigs: [[credentialsId: GITCREDENTIAL, url: GITWEBADD]]])
@@ -40,9 +42,10 @@ pipeline {
         
 
     
-        stage('Build') {
+        stage('code build') {
             steps {
                 echo 'Building..'
+                sh -c "mvn clean package"
             }
         }
         stage('Test') {
