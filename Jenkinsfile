@@ -13,7 +13,6 @@ pipeline {
         GITSSHADD = 'git@github.com:hjk1996/aws-test-3.git'
         GITCREDENTIAL = 'github_credential'
     }
-
     stages {
     
         stage('Checkout Github') {
@@ -48,6 +47,18 @@ pipeline {
                 sh "mvn clean package"
             }
         }
+        
+        stage('docker image build') {
+            steps {
+                echo 'build docker image...'
+                sh "docker build -t dunhill741/spring:1.0 ."
+                
+                
+            
+            }
+        
+        }
+        
         stage('Test') {
             steps {
                 echo 'Testing..'
