@@ -13,7 +13,7 @@ pipeline {
         GITSSHADD = 'git@github.com:hjk1996/aws-test-3.git'
         GITCREDENTIAL = 'github_credential'
         DOCKERHUB = 'dunhill741/spring'
-        DOCKERHUBCREDENTIAL = 'dockerhub_credential'
+        DOCKERHUBCREDENTIAL = 'docker_credential'
     }
     stages {
     
