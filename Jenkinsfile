@@ -79,11 +79,11 @@ pipeline {
             steps {
                 echo 'pushing docker image...'
                 
-                withDockerRegistry(credentialsId: DOCKERHUBCREDENTIAL, url: ''){
+                withDockerRegistry(credentialsId: DOCKERHUBCREDENTIAL, url: '') {
                     sh "docker push ${DOCKERHUB}:${currentBuild.number}"
                     sh "docker push ${DOCKERHUB}:latest"
-
                 }
+
                 
 
             
