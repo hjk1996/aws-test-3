@@ -135,15 +135,13 @@ pipeline {
             }
           }
         }
-
-        
-        
         
         stage('Test') {
             steps {
                 echo 'Testing..'
             }
-        }spring-dep-557f598cc7
+        }
+        
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
