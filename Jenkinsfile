@@ -45,7 +45,7 @@ pipeline {
         stage('code build') {
             steps {
                 echo 'Building..'
-                sh -c "mvn clean package"
+                sh "mvn clean package"
             }
         }
         stage('Test') {
