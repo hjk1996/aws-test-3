@@ -24,8 +24,21 @@ pipeline {
             
             
             }
+            
+            post {
+                failure {
+                    echo 'repository clone failure'
+                }
+            
+                success {
+                    echo 'repository clonse success'
+                }
+        
+            }
         
         }
+        
+
     
         stage('Build') {
             steps {
